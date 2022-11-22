@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>пр2</title>
+</head>
+<body>
+<li><a href="/Car" class="nav-link px-2 text-white">Автомобили</a></li>
+<li><a href="/" class="nav-link px-2 text-white">Сотрудники</a></li>
+<h1>Автомобили</h1>
+<a href="/Search/Car"> Поиск Автомобиля</a>
+<a href="/Add/Car"> Добавить Автомобиль</a>
+<div th:each="el : ${car}">
+    <h3 th:text="${el.getMarks()}" ></h3>
+    <p th:text="${el.getVin()}"></p>
+    <p th:text="${el.getNumberengen()}"></p>
+    <p th:text="${el.getYear()}"></p>
+    <p th:text="${el.getColor()}"></p>
+</div>
+</body>
+</html>

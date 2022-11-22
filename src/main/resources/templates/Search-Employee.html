@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>пр2</title>
+</head>
+<body>
+<h2>Поиск сотрудника по фамилии</h2>
+<form method="post" th:action="${'/Search/Employee-result'}">
+    <input type="text" name="lastname">  <button type="submit">Точное сопадение</button>
+
+</form>
+    <form method="post" th:action="${'/Search/Employee'}">
+        <input type="text" name="lastname"> <button type="submit">Не точное сопадение</button>
+    </form>
+    <tbody>
+    <tr th:each="el : ${result}">
+        <h3 th:text="${el.getLastname()}" ></h3>
+        <p th:text="${el.getName()}"></p>
+        <p th:text="${el.getMiddlename()}"></p>
+        <p th:text="${el.getBirthday()}"></p>
+        <p th:text="${el.getExpetienxs()}"></p>
+    </tr>
+    </tbody>
+
+</body>
+</html>

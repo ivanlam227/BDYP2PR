@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>пр2</title>
+</head>
+<body>
+<h2>Поиск автомобиля по марке</h2>
+<form method="get" th:action="${'/Search/Car-result'}">
+  <input type="text" name="marks">
+  <button type="submit">Точное сопадение</button>
+</form>
+<form method="post" th:action="${'/Search/Car'}">
+  <input type="text" name="marks">
+  <button type="submit">Не точное сопадение</button>
+</form>
+  <div th:each="el : ${result}">
+    <h3 th:text="${el.getMarks()}" ></h3>
+    <p th:text="${el.getVin()}"></p>
+    <p th:text="${el.getNumberengen()}"></p>
+    <p th:text="${el.getYear()}"></p>
+    <p th:text="${el.getColor()}"></p>
+  </div>
+</body>
+</html>

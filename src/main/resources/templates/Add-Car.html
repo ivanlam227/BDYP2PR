@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>пр2</title>
+</head>
+<body>
+<form th:action = "${'/Add/Car'}" method="post">
+    <input type="text" name="marks" placeholder="Модель авто"><br>
+    <input type="text" name="vin" placeholder="Vin номер"><br>
+    <input type="text" name="numberengen" placeholder="номер двигателя"><br>
+    <input type="date" name="year" placeholder="Год выпуска"><br>
+    <input type="text" name="color" placeholder="Цвет авто"><br>
+    <button type="submit"> Добавить автомобиль</button>
+</form>
+</body>
+</html>

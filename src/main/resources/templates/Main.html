@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>пр2</title>
+</head>
+<body>
+
+<li><a href="/Car" class="nav-link px-2 text-white">Автомобили</a></li>
+<li><a href="/" class="nav-link px-2 text-white">Сотрудники</a></li>
+<h1>сотрудники</h1>
+<a href="/Search/Employee"> Поиск сотрудника</a>
+<a href="/Add/Employee"> Добавить сотрудника</a>
+<div th:each="el : ${employees}">
+    <h3 Фамилия th:text="${el.getLastname()}" ></h3>
+    <p th:text="${el.getName()}"></p>
+    <p th:text="${el.getMiddlename()}"></p>
+    <p th:text="${el.getBirthday()}"></p>
+    <p th:text="${el.getExpetienxs()}"></p>
+</div>
+</body>
+</html>
